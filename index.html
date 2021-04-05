@@ -79,219 +79,652 @@
             zoomOffset: -1
         }).addTo(map);
 
+        var flagIcon = L.icon({
+            iconUrl: 'flag.svg',
+            iconSize: [13, 13], // size of the icon
+            //shadowSize:   [50, 64], // size of the shadow
+            iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
+            //shadowAnchor: [4, 62],  // the same for the shadow
+            popupAnchor: [-15, -100] // point from which the popup should open relative to the iconAnchor
+        });
 
-        L.marker([51.52021528, -0.097721579]).addTo(map).bindPopup('Barbican');
-        L.marker([51.51434238, -0.075626913]).addTo(map).bindPopup('Aldgate');
-        L.marker([51.51508162, -0.073001463]).addTo(map).bindPopup('Aldgate East');
-        L.marker([51.53296802, -0.105581449]).addTo(map).bindPopup('Angel');
-        L.marker([51.56549053, -0.135121577]).addTo(map).bindPopup('Archway');
-        L.marker([51.55854138, -0.105499934]).addTo(map).bindPopup('Arsenal');
-        L.marker([51.52312962, -0.156904194]).addTo(map).bindPopup('Baker Street');
-        L.marker([51.51334706, -0.089000124]).addTo(map).bindPopup('Bank and Monument');
-        L.marker([51.49022868, -0.213430145]).addTo(map).bindPopup('Barons Court');
-        L.marker([51.51211129, -0.187901574]).addTo(map).bindPopup('Bayswater');
-        L.marker([51.55019088, -0.163974493]).addTo(map).bindPopup('Belsize Park');
-        L.marker([51.52719174, -0.055392112]).addTo(map).bindPopup('Bethnal Green LU');
-        L.marker([51.51158693, -0.102995385]).addTo(map).bindPopup('Blackfriars LU');
-        L.marker([51.51379752, -0.14961361]).addTo(map).bindPopup('Bond Street');
-        L.marker([51.50104887, -0.094197323]).addTo(map).bindPopup('Borough');
-        L.marker([51.52704181, -0.024359591]).addTo(map).bindPopup('Bow Road');
-        L.marker([51.5248402, -0.011682374]).addTo(map).bindPopup('Bromley-by-Bow');
-        L.marker([51.54788544, -0.118360862]).addTo(map).bindPopup('Caledonian Road');
-        L.marker([51.53996935, -0.142452381]).addTo(map).bindPopup('Camden Town');
-        L.marker([51.51136209, -0.090250527]).addTo(map).bindPopup('Cannon Street LU');
-        L.marker([51.54414909, -0.153733071]).addTo(map).bindPopup('Chalk Farm');
-        L.marker([51.51849402, -0.111962027]).addTo(map).bindPopup('Chancery Lane');
-        L.marker([51.50731249, -0.122367337]).addTo(map).bindPopup('Embankment');
-        L.marker([51.46180367, -0.138314902]).addTo(map).bindPopup('Clapham Common');
-        L.marker([51.46491621, -0.129910063]).addTo(map).bindPopup('Clapham North');
-        L.marker([51.51276023, -0.124506895]).addTo(map).bindPopup('Covent Garden');
-        L.marker([51.49135667, -0.194313809]).addTo(map).bindPopup('Earls Court');
-        L.marker([51.51626341, -0.248112225]).addTo(map).bindPopup('East Acton');
-        L.marker([51.51999804, -0.167668254]).addTo(map).bindPopup('Edgware Road (DIS))');
-        L.marker([51.49584938, -0.100738715]).addTo(map).bindPopup('Elephant & Castle LU');
-        L.marker([51.52866433, -0.133296472]).addTo(map).bindPopup('Euston LU');
-        L.marker([51.52866433, -0.133296472]).addTo(map).bindPopup('Euston Square');
-        L.marker([51.52019569, -0.104843062]).addTo(map).bindPopup('Farringdon');
-        L.marker([51.5470962, -0.180050561]).addTo(map).bindPopup('Finchley Road');
-        L.marker([51.56463545, -0.105881486]).addTo(map).bindPopup('Finsbury Park LU');
-        L.marker([51.4802609, -0.195544164]).addTo(map).bindPopup('Fulham Broadway');
-        L.marker([51.49449956, -0.18354356]).addTo(map).bindPopup('Gloucester Road');
-        L.marker([51.50207697, -0.227404006]).addTo(map).bindPopup('Goldhawk Road');
-        L.marker([51.52061311, -0.13480769]).addTo(map).bindPopup('Goodge Street');
-        L.marker([51.5237888, -0.143961425]).addTo(map).bindPopup('Great Portland Street');
-        L.marker([51.50676048, -0.142477576]).addTo(map).bindPopup('Green Park');
-        L.marker([51.49181978, -0.222860929]).addTo(map).bindPopup('Hammersmith (DIS)');
-        L.marker([51.5565426, -0.17801456]).addTo(map).bindPopup('Hampstead');
-        L.marker([51.50965819, -0.224472609]).addTo(map).bindPopup('Wood Lane');
-        L.marker([51.54649551, -0.10408214]).addTo(map).bindPopup('Highbury & Islington');
-        L.marker([51.50072945, -0.191566058]).addTo(map).bindPopup('High Street Kensington');
-        L.marker([51.51723574, -0.119840507]).addTo(map).bindPopup('Holborn');
-        L.marker([51.50714648, -0.206557778]).addTo(map).bindPopup('Holland Park');
-        L.marker([51.5528161, -0.112935697]).addTo(map).bindPopup('Holloway Road');
-        L.marker([51.50258401, -0.152474114]).addTo(map).bindPopup('Hyde Park Corner');
-        L.marker([51.48866246, -0.105070613]).addTo(map).bindPopup('Kennington');
-        L.marker([51.4978797, -0.210379242]).addTo(map).bindPopup('Kensington (Olympia))');
-        L.marker([51.55000952, -0.140471264]).addTo(map).bindPopup('Kentish Town');
-        L.marker([51.53031246, -0.12387213]).addTo(map).bindPopup('Kings Cross St. Pancras');
-        L.marker([51.5013549, -0.160664486]).addTo(map).bindPopup('Knightsbridge');
-        L.marker([51.51721067, -0.210198172]).addTo(map).bindPopup('Ladbroke Grove');
-        L.marker([51.49912995, -0.111768261]).addTo(map).bindPopup('Lambeth North');
-        L.marker([51.51189094, -0.175429929]).addTo(map).bindPopup('Lancaster Gate');
-        L.marker([51.5139581, -0.217459666]).addTo(map).bindPopup('Latimer Road');
-        L.marker([51.51129118, -0.128242148]).addTo(map).bindPopup('Leicester Square');
-        L.marker([51.51759826, -0.082249622]).addTo(map).bindPopup('Liverpool Street LU');
-        L.marker([51.50467435, -0.086005598]).addTo(map).bindPopup('London Bridge LU');
-        L.marker([51.52999506, -0.185432647]).addTo(map).bindPopup('Maida Vale');
-        L.marker([51.57074714, -0.095684976]).addTo(map).bindPopup('Manor House');
-        L.marker([51.51209175, -0.094197658]).addTo(map).bindPopup('Mansion House');
-        L.marker([51.51396549, -0.158571216]).addTo(map).bindPopup('Marble Arch');
-        L.marker([51.52239667, -0.163492564]).addTo(map).bindPopup('Marylebone LU');
-        L.marker([51.52531097, -0.032666084]).addTo(map).bindPopup('Mile End');
-        L.marker([51.51843714, -0.089017688]).addTo(map).bindPopup('Moorgate');
-        L.marker([51.53436222, -0.13874435]).addTo(map).bindPopup('Mornington Crescent');
-        L.marker([51.50937534, -0.195921618]).addTo(map).bindPopup('Notting Hill Gate');
-        L.marker([51.52558147, -0.087622958]).addTo(map).bindPopup('Old Street');
-        L.marker([51.4814126, -0.113321076]).addTo(map).bindPopup('Oval');
-        L.marker([51.5152234, -0.140836171]).addTo(map).bindPopup('Oxford Circus');
-        L.marker([51.51539379, -0.175736752]).addTo(map).bindPopup('Paddington TfL');
-        L.marker([51.47496015, -0.201124492]).addTo(map).bindPopup('Parsons Green');
-        L.marker([51.50969675, -0.133711597]).addTo(map).bindPopup('Piccadilly Circus');
-        L.marker([51.46786534, -0.209365417]).addTo(map).bindPopup('Putney Bridge');
-        L.marker([51.51044923, -0.187419903]).addTo(map).bindPopup('Queensway');
-        L.marker([51.49406798, -0.235969233]).addTo(map).bindPopup('Ravenscourt Park');
-        L.marker([51.52381067, -0.145344411]).addTo(map).bindPopup('Regents Park');
-        L.marker([51.51829435, -0.188823674]).addTo(map).bindPopup('Royal Oak');
-        L.marker([51.52301304, -0.124590198]).addTo(map).bindPopup('Russell Square');
-        L.marker([51.49960979, -0.133878755]).addTo(map).bindPopup('St. Jamess Park');
-        L.marker([51.53485441, -0.17406484]).addTo(map).bindPopup('St. Johns Wood');
-        L.marker([51.5148353, -0.097571001]).addTo(map).bindPopup('St. Pauls');
-        L.marker([51.50453215, -0.218519159]).addTo(map).bindPopup('Shepherds Bush LU');
-        L.marker([51.49235976, -0.156488857]).addTo(map).bindPopup('Sloane Square');
-        L.marker([51.49407137, -0.173923023]).addTo(map).bindPopup('South Kensington');
-        L.marker([51.52199583, -0.047382523]).addTo(map).bindPopup('Stepney Green');
-        L.marker([51.47215926, -0.122846304]).addTo(map).bindPopup('Stockwell');
-        L.marker([51.50835863, -0.124802938]).addTo(map).bindPopup('Charing Cross LU');
-        L.marker([51.54303485, -0.175626604]).addTo(map).bindPopup('Swiss Cottage');
-        L.marker([51.51104061, -0.11372575]).addTo(map).bindPopup('Temple');
-        L.marker([51.51621087, -0.131110439]).addTo(map).bindPopup('Tottenham Court Road');
-        L.marker([51.51039427, -0.076701198]).addTo(map).bindPopup('Tower Hill');
-        L.marker([51.5564408, -0.137742175]).addTo(map).bindPopup('Tufnell Park');
-        L.marker([51.49642395, -0.143920706]).addTo(map).bindPopup('Victoria LU');
-        L.marker([51.52457999, -0.138278332]).addTo(map).bindPopup('Warren Street');
-        L.marker([51.52310444, -0.182953293]).addTo(map).bindPopup('Warwick Avenue');
-        L.marker([51.50314664, -0.113259252]).addTo(map).bindPopup('Waterloo LU');
-        L.marker([51.52098884, -0.200882515]).addTo(map).bindPopup('Westbourne Park');
-        L.marker([51.48732891, -0.195538812]).addTo(map).bindPopup('West Brompton');
-        L.marker([51.54747433, -0.191126586]).addTo(map).bindPopup('West Hampstead LU');
-        L.marker([51.49010936, -0.206203695]).addTo(map).bindPopup('West Kensington');
-        L.marker([51.50140159, -0.125002079]).addTo(map).bindPopup('Westminster');
-        L.marker([51.51958779, -0.059420485]).addTo(map).bindPopup('Whitechapel');
-        L.marker([51.51223244, -0.224631931]).addTo(map).bindPopup('White City');
-        L.marker([51.49348335, -0.224640157]).addTo(map).bindPopup('Hammersmith (H&C)');
-        L.marker([51.52064536, -0.170539552]).addTo(map).bindPopup('Edgware Road (Bak)');
-        L.marker([51.50588071, -0.227400493]).addTo(map).bindPopup('Shepherds Bush Market');
-        L.marker([51.48955286, -0.133108258]).addTo(map).bindPopup('Pimlico');
-        L.marker([51.4857358, -0.123829953]).addTo(map).bindPopup('Vauxhall LU');
-        L.marker([51.4627368, -0.114552098]).addTo(map).bindPopup('Brixton LU');
-        L.marker([51.50385362, -0.10579494]).addTo(map).bindPopup('Southwark');
-        L.marker([51.49796078, -0.06433009]).addTo(map).bindPopup('Bermondsey');
-        L.marker([51.49816841, -0.050807121]).addTo(map).bindPopup('Canada Water');
-        L.marker([51.5035784, -0.01946684]).addTo(map).bindPopup('Canary Wharf DLR');
-        L.marker([51.51047692, -0.012624885]).addTo(map).bindPopup('All Saints');
-        L.marker([51.5276152, -0.020499899]).addTo(map).bindPopup('Bow Church');
-        L.marker([51.5035784, -0.01946684]).addTo(map).bindPopup('Canary Wharf LU');
-        L.marker([51.51888394, -0.015213799]).addTo(map).bindPopup('Langdon Park');
-        L.marker([51.49583998, -0.014932813]).addTo(map).bindPopup('Crossharbour');
-        L.marker([51.50338657, -0.021953532]).addTo(map).bindPopup('Heron Quays');
-        L.marker([51.48795009, -0.010493303]).addTo(map).bindPopup('Island Gardens');
-        L.marker([51.49123619, -0.014959945]).addTo(map).bindPopup('Mudchute');
-        L.marker([51.50758807, -0.017275493]).addTo(map).bindPopup('Poplar');
-        L.marker([51.51130016, -0.056919207]).addTo(map).bindPopup('Shadwell DLR');
-        L.marker([51.50086361, -0.018460693]).addTo(map).bindPopup('South Quay');
-        L.marker([51.51231216, -0.039380078]).addTo(map).bindPopup('Limehouse DLR');
-        L.marker([51.51039264, -0.074409877]).addTo(map).bindPopup('Tower Gateway');
-        L.marker([51.50963815, -0.026323137]).addTo(map).bindPopup('Westferry');
-        L.marker([51.50676266, -0.020582447]).addTo(map).bindPopup('West India Quay');
-        L.marker([51.52225847, -0.018007754]).addTo(map).bindPopup('Devons Road');
-        L.marker([51.50783154, -0.007235166]).addTo(map).bindPopup('Blackwall');
-        L.marker([51.50868401, -0.002370332]).addTo(map).bindPopup('East India');
-        L.marker([51.53868473, -0.075595258]).addTo(map).bindPopup('Haggerston');
-        L.marker([51.53139161, -0.075585647]).addTo(map).bindPopup('Hoxton');
-        L.marker([51.52346682, -0.077087425]).addTo(map).bindPopup('Shoreditch High Street');
-        L.marker([51.5015945, -0.052966296]).addTo(map).bindPopup('Rotherhithe');
-        L.marker([51.51130016, -0.056919207]).addTo(map).bindPopup('Shadwell LO');
-        L.marker([51.49326686, -0.047529988]).addTo(map).bindPopup('Surrey Quays');
-        L.marker([51.50434032, -0.055860815]).addTo(map).bindPopup('Wapping');
-        L.marker([51.55540529, -0.151301033]).addTo(map).bindPopup('Gospel Oak');
-        L.marker([51.55519992, -0.164566183]).addTo(map).bindPopup('Hampstead Heath');
-        L.marker([51.53726774, -0.191113106]).addTo(map).bindPopup('Kilburn High Road');
-        L.marker([51.54747433, -0.191126586]).addTo(map).bindPopup('West Hampstead LO');
-        L.marker([51.54866782, -0.076226922]).addTo(map).bindPopup('Dalston Kingsland');
-        L.marker([51.54328458, -0.115204857]).addTo(map).bindPopup('Caledonian Road & Barnsbury');
-        L.marker([51.54185123, -0.139203113]).addTo(map).bindPopup('Camden Road');
-        L.marker([51.54818839, -0.092574196]).addTo(map).bindPopup('Canonbury');
-        L.marker([51.54609372, -0.074994205]).addTo(map).bindPopup('Dalston Junction');
-        L.marker([51.52866433, -0.133296472]).addTo(map).bindPopup('Euston NR');
-        L.marker([51.5501195, -0.183651203]).addTo(map).bindPopup('Finchley Road & Frognal');
-        L.marker([51.54654797, -0.14675641]).addTo(map).bindPopup('Kentish Town West');
-        L.marker([51.54147685, -0.1783712]).addTo(map).bindPopup('South Hampstead');
-        L.marker([51.52239667, -0.163492564]).addTo(map).bindPopup('Marylebone NR');
-        L.marker([51.5636233, -0.129109364]).addTo(map).bindPopup('Upper Holloway');
-        L.marker([51.54747433, -0.191126586]).addTo(map).bindPopup('West Hampstead NR');
-        L.marker([51.5305544, -0.125505782]).addTo(map).bindPopup('St. Pancras International');
-        L.marker([51.51539379, -0.175736752]).addTo(map).bindPopup('Paddington NR');
-        L.marker([51.45399137, -0.102562908]).addTo(map).bindPopup('Herne Hill');
-        L.marker([51.46657998, -0.053679743]).addTo(map).bindPopup('Nunhead');
-        L.marker([51.4627368, -0.114552098]).addTo(map).bindPopup('Brixton NR');
-        L.marker([51.4666789, -0.102497342]).addTo(map).bindPopup('Loughborough Junction');
-        L.marker([51.43257589, -0.080230208]).addTo(map).bindPopup('Sydenham Hill');
-        L.marker([51.44091182, -0.090672676]).addTo(map).bindPopup('West Dulwich');
-        L.marker([51.51158693, -0.102995385]).addTo(map).bindPopup('Blackfriars NR');
-        L.marker([51.51393507, -0.103618449]).addTo(map).bindPopup('City Thameslink');
-        L.marker([51.51136209, -0.090250527]).addTo(map).bindPopup('Cannon Street NR');
-        L.marker([51.50835863, -0.124802938]).addTo(map).bindPopup('Charing Cross NR');
-        L.marker([51.50467435, -0.086005598]).addTo(map).bindPopup('London Bridge NR');
-        L.marker([51.50416861, -0.109153638]).addTo(map).bindPopup('Waterloo East');
-        L.marker([51.49584938, -0.100738715]).addTo(map).bindPopup('Elephant & Castle NR');
-        L.marker([51.46546951, -0.132464503]).addTo(map).bindPopup('Clapham High Street');
-        L.marker([51.46162558, -0.080436572]).addTo(map).bindPopup('East Dulwich');
-        L.marker([51.42446952, -0.083835168]).addTo(map).bindPopup('Gipsy Hill');
-        L.marker([51.4702232, -0.139037676]).addTo(map).bindPopup('Wandsworth Road');
-        L.marker([51.42584586, -0.132325497]).addTo(map).bindPopup('Streatham');
-        L.marker([51.41898467, -0.135726165]).addTo(map).bindPopup('Streatham Common');
-        L.marker([51.43979743, -0.105122509]).addTo(map).bindPopup('Tulse Hill');
-        L.marker([51.46820064, -0.09098787]).addTo(map).bindPopup('Denmark Hill');
-        L.marker([51.46951136, -0.069983553]).addTo(map).bindPopup('Peckham Rye');
-        L.marker([51.47428471, -0.057354979]).addTo(map).bindPopup('Queens Road Peckham');
-        L.marker([51.48767662, -0.054754821]).addTo(map).bindPopup('South Bermondsey');
-        L.marker([51.49642395, -0.143920706]).addTo(map).bindPopup('Victoria NR');
-        L.marker([51.45448181, -0.087918681]).addTo(map).bindPopup('North Dulwich');
-        L.marker([51.43846037, -0.127681481]).addTo(map).bindPopup('Streatham Hill');
-        L.marker([51.43124112, -0.103189135]).addTo(map).bindPopup('West Norwood');
-        L.marker([51.4857358, -0.123829953]).addTo(map).bindPopup('Vauxhall NR');
-        L.marker([51.50314664, -0.113259252]).addTo(map).bindPopup('Waterloo NR');
-        L.marker([51.55307831, -0.1057702]).addTo(map).bindPopup('Drayton Park');
-        L.marker([51.54063331, -0.096365526]).addTo(map).bindPopup('Essex Road');
-        L.marker([51.56463545, -0.105881486]).addTo(map).bindPopup('Finsbury Park NR');
-        L.marker([51.53079819, -0.122756421]).addTo(map).bindPopup('Kings Cross');
-        L.marker([51.54907809, -0.060185105]).addTo(map).bindPopup('Hackney Downs');
-        L.marker([51.56156909, -0.057489458]).addTo(map).bindPopup('Clapton');
-        L.marker([51.56463761, -0.072335395]).addTo(map).bindPopup('Stoke Newington');
-        L.marker([51.52719174, -0.055392112]).addTo(map).bindPopup('Bethnal Green LO');
-        L.marker([51.53205976, -0.057203201]).addTo(map).bindPopup('Cambridge Heath');
-        L.marker([51.51759826, -0.082249622]).addTo(map).bindPopup('Liverpool Street NR');
-        L.marker([51.54071884, -0.057699686]).addTo(map).bindPopup('London Fields');
-        L.marker([51.55876348, -0.068385665]).addTo(map).bindPopup('Rectory Road');
-        L.marker([51.5744476, -0.076668342]).addTo(map).bindPopup('Stamford Hill');
-        L.marker([51.54725744, -0.055589512]).addTo(map).bindPopup('Hackney Central');
-        L.marker([51.54355841, -0.025259503]).addTo(map).bindPopup('Hackney Wick');
-        L.marker([51.54659545, -0.038512347]).addTo(map).bindPopup('Homerton');
-        L.marker([51.5713271, -0.117133285]).addTo(map).bindPopup('Crouch Hill');
-        L.marker([51.51156671, -0.078554153]).addTo(map).bindPopup('Fenchurch Street');
-        L.marker([51.51231216, -0.039380078]).addTo(map).bindPopup('Limehouse NR');
-        L.marker([51.47493893, -0.182837505]).addTo(map).bindPopup('Imperial Wharf');
-        L.marker([51.50453215, -0.218519159]).addTo(map).bindPopup('Shepherds Bush NR');
+
+        L.marker([51.52021528, -0.097721579], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Barbican');
+        L.marker([51.51434238, -0.075626913], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Aldgate');
+        L.marker([51.51508162, -0.073001463], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Aldgate East');
+        L.marker([51.53296802, -0.105581449], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Angel');
+        L.marker([51.56549053, -0.135121577], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Archway');
+        L.marker([51.55854138, -0.105499934], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Arsenal');
+        L.marker([51.52312962, -0.156904194], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Baker Street');
+        L.marker([51.51334706, -0.089000124], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Bank and Monument');
+        L.marker([51.49022868, -0.213430145], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Barons Court');
+        L.marker([51.51211129, -0.187901574], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Bayswater');
+        L.marker([51.55019088, -0.163974493], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Belsize Park');
+        L.marker([51.52719174, -0.055392112], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Bethnal Green LU');
+        L.marker([51.51158693, -0.102995385], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Blackfriars LU');
+        L.marker([51.51379752, -0.14961361], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Bond Street');
+        L.marker([51.50104887, -0.094197323], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Borough');
+        L.marker([51.52704181, -0.024359591], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Bow Road');
+        L.marker([51.5248402, -0.011682374], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Bromley-by-Bow');
+        L.marker([51.54788544, -0.118360862], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Caledonian Road');
+        L.marker([51.53996935, -0.142452381], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Camden Town');
+        L.marker([51.51136209, -0.090250527], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Cannon Street LU');
+        L.marker([51.54414909, -0.153733071], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Chalk Farm');
+        L.marker([51.51849402, -0.111962027], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Chancery Lane');
+        L.marker([51.50731249, -0.122367337], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Embankment');
+        L.marker([51.46180367, -0.138314902], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Clapham Common');
+        L.marker([51.46491621, -0.129910063], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Clapham North');
+        L.marker([51.51276023, -0.124506895], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Covent Garden');
+        L.marker([51.49135667, -0.194313809], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Earls Court');
+        L.marker([51.51626341, -0.248112225], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('East Acton');
+        L.marker([51.51999804, -0.167668254], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Edgware Road (DIS))');
+        L.marker([51.49584938, -0.100738715], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Elephant & Castle LU');
+        L.marker([51.52866433, -0.133296472], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Euston LU');
+        L.marker([51.52866433, -0.133296472], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Euston Square');
+        L.marker([51.52019569, -0.104843062], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Farringdon');
+        L.marker([51.5470962, -0.180050561], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Finchley Road');
+        L.marker([51.56463545, -0.105881486], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Finsbury Park LU');
+        L.marker([51.4802609, -0.195544164], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Fulham Broadway');
+        L.marker([51.49449956, -0.18354356], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Gloucester Road');
+        L.marker([51.50207697, -0.227404006], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Goldhawk Road');
+        L.marker([51.52061311, -0.13480769], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Goodge Street');
+        L.marker([51.5237888, -0.143961425], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Great Portland Street');
+        L.marker([51.50676048, -0.142477576], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Green Park');
+        L.marker([51.49181978, -0.222860929], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Hammersmith (DIS)');
+        L.marker([51.5565426, -0.17801456], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Hampstead');
+        L.marker([51.50965819, -0.224472609], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Wood Lane');
+        L.marker([51.54649551, -0.10408214], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Highbury & Islington');
+        L.marker([51.50072945, -0.191566058], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('High Street Kensington');
+        L.marker([51.51723574, -0.119840507], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Holborn');
+        L.marker([51.50714648, -0.206557778], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Holland Park');
+        L.marker([51.5528161, -0.112935697], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Holloway Road');
+        L.marker([51.50258401, -0.152474114], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Hyde Park Corner');
+        L.marker([51.48866246, -0.105070613], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Kennington');
+        L.marker([51.4978797, -0.210379242], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Kensington (Olympia))');
+        L.marker([51.55000952, -0.140471264], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Kentish Town');
+        L.marker([51.53031246, -0.12387213], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Kings Cross St. Pancras');
+        L.marker([51.5013549, -0.160664486], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Knightsbridge');
+        L.marker([51.51721067, -0.210198172], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Ladbroke Grove');
+        L.marker([51.49912995, -0.111768261], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Lambeth North');
+        L.marker([51.51189094, -0.175429929], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Lancaster Gate');
+        L.marker([51.5139581, -0.217459666], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Latimer Road');
+        L.marker([51.51129118, -0.128242148], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Leicester Square');
+        L.marker([51.51759826, -0.082249622], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Liverpool Street LU');
+        L.marker([51.50467435, -0.086005598], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('London Bridge LU');
+        L.marker([51.52999506, -0.185432647], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Maida Vale');
+        L.marker([51.57074714, -0.095684976], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Manor House');
+        L.marker([51.51209175, -0.094197658], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Mansion House');
+        L.marker([51.51396549, -0.158571216], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Marble Arch');
+        L.marker([51.52239667, -0.163492564], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Marylebone LU');
+        L.marker([51.52531097, -0.032666084], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Mile End');
+        L.marker([51.51843714, -0.089017688], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Moorgate');
+        L.marker([51.53436222, -0.13874435], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Mornington Crescent');
+        L.marker([51.50937534, -0.195921618], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Notting Hill Gate');
+        L.marker([51.52558147, -0.087622958], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Old Street');
+        L.marker([51.4814126, -0.113321076], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Oval');
+        L.marker([51.5152234, -0.140836171], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Oxford Circus');
+        L.marker([51.51539379, -0.175736752], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Paddington TfL');
+        L.marker([51.47496015, -0.201124492], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Parsons Green');
+        L.marker([51.50969675, -0.133711597], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Piccadilly Circus');
+        L.marker([51.46786534, -0.209365417], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Putney Bridge');
+        L.marker([51.51044923, -0.187419903], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Queensway');
+        L.marker([51.49406798, -0.235969233], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Ravenscourt Park');
+        L.marker([51.52381067, -0.145344411], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Regents Park');
+        L.marker([51.51829435, -0.188823674], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Royal Oak');
+        L.marker([51.52301304, -0.124590198], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Russell Square');
+        L.marker([51.49960979, -0.133878755], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('St. Jamess Park');
+        L.marker([51.53485441, -0.17406484], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('St. Johns Wood');
+        L.marker([51.5148353, -0.097571001], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('St. Pauls');
+        L.marker([51.50453215, -0.218519159], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Shepherds Bush LU');
+        L.marker([51.49235976, -0.156488857], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Sloane Square');
+        L.marker([51.49407137, -0.173923023], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('South Kensington');
+        L.marker([51.52199583, -0.047382523], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Stepney Green');
+        L.marker([51.47215926, -0.122846304], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Stockwell');
+        L.marker([51.50835863, -0.124802938], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Charing Cross LU');
+        L.marker([51.54303485, -0.175626604], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Swiss Cottage');
+        L.marker([51.51104061, -0.11372575], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Temple');
+        L.marker([51.51621087, -0.131110439], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Tottenham Court Road');
+        L.marker([51.51039427, -0.076701198], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Tower Hill');
+        L.marker([51.5564408, -0.137742175], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Tufnell Park');
+        L.marker([51.49642395, -0.143920706], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Victoria LU');
+        L.marker([51.52457999, -0.138278332], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Warren Street');
+        L.marker([51.52310444, -0.182953293], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Warwick Avenue');
+        L.marker([51.50314664, -0.113259252], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Waterloo LU');
+        L.marker([51.52098884, -0.200882515], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Westbourne Park');
+        L.marker([51.48732891, -0.195538812], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('West Brompton');
+        L.marker([51.54747433, -0.191126586], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('West Hampstead LU');
+        L.marker([51.49010936, -0.206203695], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('West Kensington');
+        L.marker([51.50140159, -0.125002079], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Westminster');
+        L.marker([51.51958779, -0.059420485], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Whitechapel');
+        L.marker([51.51223244, -0.224631931], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('White City');
+        L.marker([51.49348335, -0.224640157], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Hammersmith (H&C)');
+        L.marker([51.52064536, -0.170539552], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Edgware Road (Bak)');
+        L.marker([51.50588071, -0.227400493], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Shepherds Bush Market');
+        L.marker([51.48955286, -0.133108258], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Pimlico');
+        L.marker([51.4857358, -0.123829953], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Vauxhall LU');
+        L.marker([51.4627368, -0.114552098], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Brixton LU');
+        L.marker([51.50385362, -0.10579494], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Southwark');
+        L.marker([51.49796078, -0.06433009], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Bermondsey');
+        L.marker([51.49816841, -0.050807121], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Canada Water');
+        L.marker([51.5035784, -0.01946684], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Canary Wharf DLR');
+        L.marker([51.51047692, -0.012624885], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('All Saints');
+        L.marker([51.5276152, -0.020499899], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Bow Church');
+        L.marker([51.5035784, -0.01946684], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Canary Wharf LU');
+        L.marker([51.51888394, -0.015213799], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Langdon Park');
+        L.marker([51.49583998, -0.014932813], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Crossharbour');
+        L.marker([51.50338657, -0.021953532], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Heron Quays');
+        L.marker([51.48795009, -0.010493303], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Island Gardens');
+        L.marker([51.49123619, -0.014959945], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Mudchute');
+        L.marker([51.50758807, -0.017275493], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Poplar');
+        L.marker([51.51130016, -0.056919207], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Shadwell DLR');
+        L.marker([51.50086361, -0.018460693], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('South Quay');
+        L.marker([51.51231216, -0.039380078], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Limehouse DLR');
+        L.marker([51.51039264, -0.074409877], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Tower Gateway');
+        L.marker([51.50963815, -0.026323137], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Westferry');
+        L.marker([51.50676266, -0.020582447], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('West India Quay');
+        L.marker([51.52225847, -0.018007754], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Devons Road');
+        L.marker([51.50783154, -0.007235166], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Blackwall');
+        L.marker([51.50868401, -0.002370332], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('East India');
+        L.marker([51.53868473, -0.075595258], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Haggerston');
+        L.marker([51.53139161, -0.075585647], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Hoxton');
+        L.marker([51.52346682, -0.077087425], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Shoreditch High Street');
+        L.marker([51.5015945, -0.052966296], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Rotherhithe');
+        L.marker([51.51130016, -0.056919207], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Shadwell LO');
+        L.marker([51.49326686, -0.047529988], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Surrey Quays');
+        L.marker([51.50434032, -0.055860815], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Wapping');
+        L.marker([51.55540529, -0.151301033], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Gospel Oak');
+        L.marker([51.55519992, -0.164566183], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Hampstead Heath');
+        L.marker([51.53726774, -0.191113106], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Kilburn High Road');
+        L.marker([51.54747433, -0.191126586], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('West Hampstead LO');
+        L.marker([51.54866782, -0.076226922], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Dalston Kingsland');
+        L.marker([51.54328458, -0.115204857], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Caledonian Road & Barnsbury');
+        L.marker([51.54185123, -0.139203113], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Camden Road');
+        L.marker([51.54818839, -0.092574196], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Canonbury');
+        L.marker([51.54609372, -0.074994205], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Dalston Junction');
+        L.marker([51.52866433, -0.133296472], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Euston NR');
+        L.marker([51.5501195, -0.183651203], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Finchley Road & Frognal');
+        L.marker([51.54654797, -0.14675641], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Kentish Town West');
+        L.marker([51.54147685, -0.1783712], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('South Hampstead');
+        L.marker([51.52239667, -0.163492564], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Marylebone NR');
+        L.marker([51.5636233, -0.129109364], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Upper Holloway');
+        L.marker([51.54747433, -0.191126586], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('West Hampstead NR');
+        L.marker([51.5305544, -0.125505782], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('St. Pancras International');
+        L.marker([51.51539379, -0.175736752], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Paddington NR');
+        L.marker([51.45399137, -0.102562908], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Herne Hill');
+        L.marker([51.46657998, -0.053679743], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Nunhead');
+        L.marker([51.4627368, -0.114552098], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Brixton NR');
+        L.marker([51.4666789, -0.102497342], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Loughborough Junction');
+        L.marker([51.43257589, -0.080230208], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Sydenham Hill');
+        L.marker([51.44091182, -0.090672676], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('West Dulwich');
+        L.marker([51.51158693, -0.102995385], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Blackfriars NR');
+        L.marker([51.51393507, -0.103618449], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('City Thameslink');
+        L.marker([51.51136209, -0.090250527], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Cannon Street NR');
+        L.marker([51.50835863, -0.124802938], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Charing Cross NR');
+        L.marker([51.50467435, -0.086005598], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('London Bridge NR');
+        L.marker([51.50416861, -0.109153638], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Waterloo East');
+        L.marker([51.49584938, -0.100738715], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Elephant & Castle NR');
+        L.marker([51.46546951, -0.132464503], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Clapham High Street');
+        L.marker([51.46162558, -0.080436572], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('East Dulwich');
+        L.marker([51.42446952, -0.083835168], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Gipsy Hill');
+        L.marker([51.4702232, -0.139037676], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Wandsworth Road');
+        L.marker([51.42584586, -0.132325497], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Streatham');
+        L.marker([51.41898467, -0.135726165], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Streatham Common');
+        L.marker([51.43979743, -0.105122509], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Tulse Hill');
+        L.marker([51.46820064, -0.09098787], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Denmark Hill');
+        L.marker([51.46951136, -0.069983553], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Peckham Rye');
+        L.marker([51.47428471, -0.057354979], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Queens Road Peckham');
+        L.marker([51.48767662, -0.054754821], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('South Bermondsey');
+        L.marker([51.49642395, -0.143920706], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Victoria NR');
+        L.marker([51.45448181, -0.087918681], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('North Dulwich');
+        L.marker([51.43846037, -0.127681481], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Streatham Hill');
+        L.marker([51.43124112, -0.103189135], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('West Norwood');
+        L.marker([51.4857358, -0.123829953], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Vauxhall NR');
+        L.marker([51.50314664, -0.113259252], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Waterloo NR');
+        L.marker([51.55307831, -0.1057702], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Drayton Park');
+        L.marker([51.54063331, -0.096365526], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Essex Road');
+        L.marker([51.56463545, -0.105881486], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Finsbury Park NR');
+        L.marker([51.53079819, -0.122756421], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Kings Cross');
+        L.marker([51.54907809, -0.060185105], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Hackney Downs');
+        L.marker([51.56156909, -0.057489458], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Clapton');
+        L.marker([51.56463761, -0.072335395], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Stoke Newington');
+        L.marker([51.52719174, -0.055392112], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Bethnal Green LO');
+        L.marker([51.53205976, -0.057203201], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Cambridge Heath');
+        L.marker([51.51759826, -0.082249622], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Liverpool Street NR');
+        L.marker([51.54071884, -0.057699686], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('London Fields');
+        L.marker([51.55876348, -0.068385665], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Rectory Road');
+        L.marker([51.5744476, -0.076668342], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Stamford Hill');
+        L.marker([51.54725744, -0.055589512], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Hackney Central');
+        L.marker([51.54355841, -0.025259503], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Hackney Wick');
+        L.marker([51.54659545, -0.038512347], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Homerton');
+        L.marker([51.5713271, -0.117133285], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Crouch Hill');
+        L.marker([51.51156671, -0.078554153], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Fenchurch Street');
+        L.marker([51.51231216, -0.039380078], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Limehouse NR');
+        L.marker([51.47493893, -0.182837505], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Imperial Wharf');
+        L.marker([51.50453215, -0.218519159], {
+            icon: flagIcon
+        }).addTo(map).bindPopup('Shepherds Bush NR');
 
 
 
